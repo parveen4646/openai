@@ -7,7 +7,7 @@ import db_utility
 import openaiutility
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
-openai.api_key = OPENAI_API_KEY
+openai.api_key = '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'
 
 app = Flask(__name__)
 
