@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input and Result</title>
+  </head>
+  <body>
+    <h1>Enter Input Value:</h1>
+    <form method="post" action="/">
+      <input type="text" name="input_value">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    {% if result %}
+    <hr>
+    <h1>Result:</h1>
+    <p>{{ result }}</p>
+    {% endif %}
+  </body>
+</html>

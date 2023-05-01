@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input and Result</title>
+  </head>
+  <body>
+    <h1>Enter Input Value:</h1>
+    <form method="post" action="/">
+      <input type="text" name="user_input">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+   
+    
+      <h2>Results:</h2>
+      <table>
+        <thead>
+          <tr>
+            {% for col in result.columns %}
+              <th>{{ col }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for _, row in result.iterrows() %}
+            <tr>
+              {% for col in result.columns %}
+                <td>{{ row[col] }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    
+  </body>
+</html>
+
+    
