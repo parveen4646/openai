@@ -11,29 +11,9 @@
       <input type="submit" value="Submit">
     </form>
 
-   
     
-      <h2>Results:</h2>
-      <table>
-        <thead>
-          <tr>
-            {% for col in result.columns %}
-              <th>{{ col }}</th>
-            {% endfor %}
-          </tr>
-        </thead>
-        <tbody>
-          {% for _, row in result.iterrows() %}
-            <tr>
-              {% for col in result.columns %}
-                <td>{{ row[col] }}</td>
-              {% endfor %}
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <h2>Result:</h2>
+      <p>{{ result }}</p>
     
   </body>
 </html>
-
-    
