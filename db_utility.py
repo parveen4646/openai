@@ -14,4 +14,5 @@ def handle_response(response):
 def excecute_query(engine,query):
     with engine.connect() as conn:
         result=conn.execute(text(query))
-        return pd.DataFrame(result.fetchall())
+        result=pd.DataFrame(result.fetchall())
+        return result

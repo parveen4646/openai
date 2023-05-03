@@ -2,6 +2,13 @@
 <html>
   <head>
     <title>Input and Result</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
   </head>
   <body>
     <h1>Enter Input Value:</h1>
@@ -13,7 +20,25 @@
 
     
       <h2>Result:</h2>
-      <p>{{ result }}</p>
+      <table>
+        <thead>
+          <tr>
+            {% for col in result.columns %}
+              <th>{{ col }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in result.values %}
+            <tr>
+              {% for val in row %}
+                <td>{{ val }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    
     
   </body>
 </html>
